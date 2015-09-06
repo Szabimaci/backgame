@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="Szabimaci">
+	<link rel="icon" href="accs/favicon.png">
+	<title>Backgame</title>
+	<script src="js/main.js"></script>
+	<script src="js/jquery-1.11.3.js"></script>
+	<link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body onload="tableInitialize()">
+
+	<div class="container">
+		<header>
+			<div class="page-header row">
+				<div>
+					<h3 id="bannerh1">Backgammon Game</h3>
+				</div>
+			</div>
+		</header>
+
+		<content>
+			<button type="button" onclick="tableInitialize()">Új játék</button>
+			<div>
+				<button type="button" onclick="dropCubes()">Dobás</button>
+				<div id="cube1"></div>
+				<div id="cube2"></div>
+			</div>
+		
+			<div id="table">
+				<div class="frame" id="top-frame"></div>
+				<div class="row" id="table-middle-row">
+					<div class="frame" id="left-frame"></div>
+					<div class="row" id="table-inner">
+						<div class="row" id="table-middle-row-toprow">
+							<div class="field odd" id="field1" ondrop="drop(event)" ondragover="allowDrop(event)">1</div>
+							<div class="field even" id="field2" ondrop="drop(event)" ondragover="allowDrop(event)">2</div>
+							<div class="field odd" id="field3" ondrop="drop(event)" ondragover="allowDrop(event)">3</div>
+							<div class="field even" id="field4" ondrop="drop(event)" ondragover="allowDrop(event)">4</div>
+							<div class="field odd" id="field5" ondrop="drop(event)" ondragover="allowDrop(event)">5</div>
+							<div class="field even" id="field6" ondrop="drop(event)" ondragover="allowDrop(event)">6</div>
+							<div class="field" id="field-bar1" ondrop="drop(event)" ondragover="allowDrop(event)">bar1</div>
+							<div class="field odd" id="field7" ondrop="drop(event)" ondragover="allowDrop(event)">7</div>
+							<div class="field even" id="field8" ondrop="drop(event)" ondragover="allowDrop(event)">8</div>
+							<div class="field odd" id="field9" ondrop="drop(event)" ondragover="allowDrop(event)">9</div>
+							<div class="field even" id="field10" ondrop="drop(event)" ondragover="allowDrop(event)">10</div>
+							<div class="field odd" id="field11" ondrop="drop(event)" ondragover="allowDrop(event)">11</div>
+							<div class="field even" id="field12" ondrop="drop(event)" ondragover="allowDrop(event)">12</div>
+						</div>
+						<div class="row" id="table-middle-row-bottomrow">
+							<div class="field even" id="field24" ondrop="drop(event)" ondragover="allowDrop(event)">24</div>
+							<div class="field odd" id="field23" ondrop="drop(event)" ondragover="allowDrop(event)">23</div>
+							<div class="field even" id="field22" ondrop="drop(event)" ondragover="allowDrop(event)">22</div>
+							<div class="field odd" id="field21" ondrop="drop(event)" ondragover="allowDrop(event)">21</div>
+							<div class="field even" id="field20" ondrop="drop(event)" ondragover="allowDrop(event)">20</div>
+							<div class="field odd" id="field19" ondrop="drop(event)" ondragover="allowDrop(event)">19</div>
+							<div class="field" id="field-bar2" ondrop="drop(event)" ondragover="allowDrop(event)">bar2</div>
+							<div class="field even" id="field18" ondrop="drop(event)" ondragover="allowDrop(event)">18</div>
+							<div class="field odd" id="field17" ondrop="drop(event)" ondragover="allowDrop(event)">17</div>
+							<div class="field even" id="field16" ondrop="drop(event)" ondragover="allowDrop(event)">16</div>
+							<div class="field odd" id="field15" ondrop="drop(event)" ondragover="allowDrop(event)">15</div>
+							<div class="field even" id="field14" ondrop="drop(event)" ondragover="allowDrop(event)">14</div>
+							<div class="field odd" id="field13" ondrop="drop(event)" ondragover="allowDrop(event)">13</div>
+						</div>
+					</div>
+					<div class="frame" id="right-frame"></div>
+					<div class="" id="end-fields">
+						<div class="endfield" id="end-field1" ondrop="drop(event)" ondragover="allowDrop(event)">end1
+							<img class="token red-token" id="red-token1" src="accs/red_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token red-token" id="red-token2" src="accs/red_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token red-token" id="red-token3" src="accs/red_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token red-token" id="red-token4" src="accs/red_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token red-token" id="red-token5" src="accs/red_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token red-token" id="red-token6" src="accs/red_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token red-token" id="red-token7" src="accs/red_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token red-token" id="red-token8" src="accs/red_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token red-token" id="red-token9" src="accs/red_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token red-token" id="red-token10" src="accs/red_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token red-token" id="red-token11" src="accs/red_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token red-token" id="red-token12" src="accs/red_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token red-token" id="red-token13" src="accs/red_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token red-token" id="red-token14" src="accs/red_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token red-token" id="red-token15" src="accs/red_token.gif" draggable="true" ondragstart="drag(event)">
+						</div>
+						<div class="endfield" id="end-field2" ondrop="drop(event)" ondragover="allowDrop(event)">end2
+							<img class="token black-token" id="black-token1" src="accs/black_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token black-token" id="black-token2" src="accs/black_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token black-token" id="black-token3" src="accs/black_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token black-token" id="black-token4" src="accs/black_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token black-token" id="black-token5" src="accs/black_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token black-token" id="black-token6" src="accs/black_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token black-token" id="black-token7" src="accs/black_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token black-token" id="black-token8" src="accs/black_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token black-token" id="black-token9" src="accs/black_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token black-token" id="black-token10" src="accs/black_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token black-token" id="black-token11" src="accs/black_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token black-token" id="black-token12" src="accs/black_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token black-token" id="black-token13" src="accs/black_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token black-token" id="black-token14" src="accs/black_token.gif" draggable="true" ondragstart="drag(event)">
+							<img class="token black-token" id="black-token15" src="accs/black_token.gif" draggable="true" ondragstart="drag(event)">
+						</div>
+					</div>
+					<div class="frame" id="right-right-frame"></div>
+				</div>
+				<div class="frame" id="bottom-frame"></div>
+			</div><!-- /table -->
+			
+		</content>
+		
+		<!--footer>Copyright (c) 2015 - Minden jog fenntartva!</footer-->
+	</div> <!-- /container -->
+
+</body>
+
+</html>

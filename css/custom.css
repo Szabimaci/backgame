@@ -1,0 +1,22 @@
+h3 {margin: 2px;}
+div {qborder: 1px dotted red;}
+#table {qborder: 3px solid black; width: 624px; height: 500px;}
+div.row {qborder: 1px solid lime;}
+div.field {float:left; border: 1px solid navy; height: 240px; width: 40px; text-align: center;}
+div.endfield {border: 1px solid navy; height: 240px; width: 40px;}
+div.frame {border: 1px solid gray; background-color: gray}
+.odd {background-color: #CCFF99;}
+.even {background-color: #A3FFFF;}
+#table-inner, #cube1, #cube2 {float: left;}
+#end-fields {float:left;}
+#table-middle-row-toprow {float:left; }
+#table-middle-row-bottomrow {float:left; clear: left;}
+#top-frame {height: 10px; width: 100%;}
+#left-frame {height: 480px; width: 10px; float: left;}
+#right-frame {height: 480px; width: 10px; float: left;}
+#right-right-frame {height: 480px; width: 10px; float: left;}
+#bottom-frame {height: 10px; width: 100%; clear: left;}
+
+
+
+

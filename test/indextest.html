@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Backgame</title>
+	<script src="test.js"></script>
+</head>
+
+<body onload="document.getElementById('newstates').innerHTML = '';">
+	<div class="container">
+		<header>
+			<div class="page-header row">
+				<div>
+					<h3 id="bannerh1">Backgammon Game</h3>
+				</div>
+			</div>
+		</header>
+
+		<content>
+			<button type="button" onclick="doit()">mutat</button>
+			<button type="button" onclick="newStateP1(3, 5)">új állapot</button>
+			<button type="button" onclick="examine()">lépésvizsgálat</button>
+			<button type="button" onclick="examineMoves()">lépésvizsgálat-mind</button>
+			<div>
+				<button type="button" onclick="">Dobás</button>
+				<div id="cube1"></div>
+				<div id="cube2"></div>
+			</div>
+		
+		  <div id="state"></div>
+		  <div id="sumP1"></div>
+		  <div id="sumP2"></div>
+			<div id="statenew"></div>
+      <textarea id="newstates" style="width:600px;" rows="14"></textarea>
+      <textarea id="newstates2" style="width:600px;" rows="12"></textarea>
+      <img src="rowtable.gif">
+      
+		</content>
+		
+		<!--footer>Copyright (c) 2015 - Minden jog fenntartva!</footer-->
+	</div> <!-- /container -->
+
+</body>
+
+</html>
